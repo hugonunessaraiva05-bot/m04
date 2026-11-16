@@ -1,0 +1,2 @@
+import { euros } from '../src/data';
+export default function ProductCard({ name, price, category, image, variant = 'standard' }) { return <article className={`product-card ${variant === 'compact' ? 'compact' : ''}`}><img src={image} alt={`Ilustração de ${name}`} width="320" height="200"/><div className="product-content"><span className="eyebrow">{category}</span><h3>{name}</h3><strong className="price">{euros(price)}</strong></div></article>; }

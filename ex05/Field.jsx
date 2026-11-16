@@ -1,0 +1,1 @@
+export default function Field({ name, label, error, ...props }) { return <div className="field"><label htmlFor={name}>{label}</label><input id={name} name={name} aria-invalid={Boolean(error)} aria-describedby={error ? `${name}-error` : undefined} {...props}/>{error && <p className="error-text" id={`${name}-error`}>{error}</p>}</div>; }
